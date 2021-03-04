@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".DashboardClientActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="300dp"
-        android:layout_height="308dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="294dp"
+        android:layout_height="263dp"
+        android:layout_marginBottom="104dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +20,8 @@
             android:id="@+id/consultDmdBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="callCreateAccountActivity"
-            android:text="@string/creer_un_compte" />
+            android:onClick="callCheckRequestActivity"
+            android:text="Demande chèquier" />
 
         <Space
             android:layout_width="match_parent"
@@ -31,30 +31,45 @@
             android:id="@+id/consultAgtBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="callConvertCurrencyActivity"
-            android:text="@string/conversion_de_devise" />
+            android:onClick="callHistoryActivity"
+            android:text="Historique" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="100px" />
 
-        <TextView
-            android:id="@+id/alreadyRegisterdTV2"
+        <Button
+            android:id="@+id/addAgtBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="callChangePwdClientActivity"
+            android:text="Changer mot de passe" />
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
+        android:layout_width="394dp"
+        android:layout_height="191dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/logo_gestibank" />
+
+    <Button
+        android:id="@+id/logOutDBClientBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="callMainActivity"
+        android:text="Log out"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

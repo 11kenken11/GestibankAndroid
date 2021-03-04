@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Gestibank</string>
+    <string name="creer_un_compte">Créer un compte</string>
+    <string name="conversion_de_devise">Conversion de devise</string>
+    <string name="creation_d_un_compte">Création d\'un compte</string>
+    <string name="nom">Nom :</string>
+    <string name="prenom">Prénom :</string>
+    <string name="telephone">Téléphone :</string>
+    <string name="email">Email :</string>
+    <string name="si_vous_avez_deja_un_compte_cliquer_ici">Si vous avez déjà un compte cliquer ici</string>
+    <string name="authentification">Authentification</string>
+    <string name="mot_de_passe">Mot de passe :</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="devise">Devise :</string>
+    <string name="montant">Montant :</string>
+    <string name="resultat">Résultat :</string>
+    <string name="convertir">Convertir</string>
+    <string name="login">Login</string>
 </resources>

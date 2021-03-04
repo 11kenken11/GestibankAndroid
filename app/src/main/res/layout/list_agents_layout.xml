@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="102dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView_flag"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="87dp" />
+
+        <LinearLayout
+            android:layout_width="211dp"
+            android:layout_height="91dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/agentNameFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/agentMat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Matricule" />
+
+            <TextView
+                android:id="@+id/agentMailTel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mail et Tel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="105dp"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <Button
+                android:id="@+id/deleteAgentBtn"
+                android:layout_width="122dp"
+                android:layout_height="48dp"
+                android:text="Supprimer" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

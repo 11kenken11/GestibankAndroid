@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gestibank</string>
+    <string name="creer_un_compte">アカウントを作成する</string>
+    <string name="conversion_de_devise">通貨換算</string>
+    <string name="creation_d_un_compte">アカウントの作成</string>
+    <string name="nom">苗字(姓) :</string>
+    <string name="prenom">名前(名) :</string>
+    <string name="telephone">携帯電話番号 :</string>
+    <string name="email">メール :</string>
+    <string name="si_vous_avez_deja_un_compte_cliquer_ici">すでにアカウントをお持ちですか？ログイン</string>
+    <string name="authentification">認証</string>
+    <string name="mot_de_passe">パスワード :</string>
+    <string name="se_connecter">ログインする</string>
+    <string name="devise">通貨 :</string>
+    <string name="montant">金額 :</string>
+    <string name="resultat">合計額 :</string>
+    <string name="convertir">為替する</string>
+    <string name="login">ログイン</string>
+</resources>

@@ -4,44 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".DashboardAgentActivity">
+
+    <Button
+        android:id="@+id/logOutDBAgentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="callMainActivity"
+        android:text="Log out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.856"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="300dp"
-        android:layout_height="308dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="304dp"
+        android:layout_height="246dp"
+        android:layout_marginBottom="104dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/consultDmdBtn"
+            android:id="@+id/gererDmdBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="callCreateAccountActivity"
-            android:text="@string/creer_un_compte" />
+            android:onClick="callValidDemandsActivity"
+            android:text="Gérer les demandes" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="100px" />
 
         <Button
-            android:id="@+id/consultAgtBtn"
+            android:id="@+id/gererChqBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="callConvertCurrencyActivity"
-            android:text="@string/conversion_de_devise" />
+            android:onClick="callValidCheckActivity"
+            android:text="Gérer les chèquiers" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="100px" />
 
-        <TextView
-            android:id="@+id/alreadyRegisterdTV2"
+        <Button
+            android:id="@+id/chgPwdBtn2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="callChangePwdAgentActivity"
+            android:text="Changer mot de passe" />
 
     </LinearLayout>
 
@@ -54,7 +69,8 @@
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/logo_gestibank" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

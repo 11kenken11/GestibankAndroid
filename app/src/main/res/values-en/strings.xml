@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gestibank</string>
+    <string name="creer_un_compte">Create an account</string>
+    <string name="conversion_de_devise">Currency convertion</string>
+    <string name="creation_d_un_compte">Creation of an account</string>
+    <string name="nom">Last name :</string>
+    <string name="prenom">First name :</string>
+    <string name="telephone">Phone :</string>
+    <string name="email">Email :</string>
+    <string name="si_vous_avez_deja_un_compte_cliquer_ici">If you already have an account click here</string>
+    <string name="authentification">Authentication</string>
+    <string name="mot_de_passe">Password :</string>
+    <string name="se_connecter">Log in</string>
+    <string name="devise">Currency :</string>
+    <string name="montant">Amount :</string>
+    <string name="resultat">Result :</string>
+    <string name="convertir">Convert</string>
+    <string name="login">Login</string>
+</resources>

@@ -4,13 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".DashboardAdminActivity">
+
+    <Button
+        android:id="@+id/logOutDBAdminBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="callMainActivity"
+        android:text="Log out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="300dp"
-        android:layout_height="308dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="303dp"
+        android:layout_height="279dp"
+        android:layout_marginBottom="56dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +33,8 @@
             android:id="@+id/consultDmdBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="callCreateAccountActivity"
-            android:text="@string/creer_un_compte" />
+            android:onClick="callListDemandsActivity"
+            android:text="Consulter les demandes" />
 
         <Space
             android:layout_width="match_parent"
@@ -31,17 +44,19 @@
             android:id="@+id/consultAgtBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="callConvertCurrencyActivity"
-            android:text="@string/conversion_de_devise" />
+            android:onClick="callListAgentsActivity"
+            android:text="Consulter les agents" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="100px" />
 
-        <TextView
-            android:id="@+id/alreadyRegisterdTV2"
+        <Button
+            android:id="@+id/addAgtBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="callCreateAgentActivity"
+            android:text="Ajouter Agent" />
 
     </LinearLayout>
 
@@ -54,7 +69,7 @@
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801"
+        app:layout_constraintVertical_bias="0.944"
         app:srcCompat="@mipmap/logo_gestibank" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
