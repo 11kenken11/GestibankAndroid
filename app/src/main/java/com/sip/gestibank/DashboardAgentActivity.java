@@ -6,11 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class DashboardAgentActivity extends AppCompatActivity {
 
-    private String agentMatricule;
+    private String agentMatricule, agentFirstName;
     Button logOutDBAgentBtn;
+
+    TextView welcomeAgent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +23,15 @@ public class DashboardAgentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard_agent);
 
         logOutDBAgentBtn = (Button) findViewById(R.id.logOutDBAgentBtn);
+        welcomeAgent = (TextView) findViewById(R.id.welcomeAgent);
 
         Bundle extras = getIntent().getExtras();
         if(extras == null) {
             agentMatricule = null;
         } else {
             agentMatricule = extras.getString("matricule");
+            agentFirstName = extras.getString("agentFirstName");
+            welcomeAgent.append(" " + agentFirstName);
         }
 
     }

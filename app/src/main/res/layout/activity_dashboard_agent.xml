@@ -72,5 +72,18 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/logo_gestibank" />
 
+    <TextView
+        android:id="@+id/welcomeAgent"
+        android:layout_width="107dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="108dp"
+        android:text="Bienvenue"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/logOutDBAgentBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

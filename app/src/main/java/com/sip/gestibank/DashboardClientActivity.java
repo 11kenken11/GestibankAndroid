@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class DashboardClientActivity extends AppCompatActivity {
 
-    private String clientEmail;
+    private String clientEmail, clientFirstName;
     Button logOutDBClientBtn;
+    TextView welcomeClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +20,15 @@ public class DashboardClientActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard_client);
 
         logOutDBClientBtn = (Button) findViewById(R.id.logOutDBClientBtn);
+        welcomeClient = (TextView) findViewById(R.id.welcomeClient);
 
         Bundle extras = getIntent().getExtras();
         if(extras == null) {
             clientEmail = null;
         } else {
             clientEmail = extras.getString("clientEmail");
+            clientFirstName = extras.getString("clientFirstName");
+            welcomeClient.append(" " + clientFirstName);
         }
     }
 

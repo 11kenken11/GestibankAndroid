@@ -89,6 +89,7 @@ public class AuthenticationActivity extends AppCompatActivity {
                         switch (user.getRole()) {
                             case "ADMIN" : {
                                 Intent i = new Intent(getApplicationContext(), DashboardAdminActivity.class);Log.i("ADMIN==>", user.toString());
+                                i.putExtra("adminFirstName", user.getFirstName());
                                 startActivity(i);
                                 break;
                             }
@@ -96,13 +97,15 @@ public class AuthenticationActivity extends AppCompatActivity {
                             case "CLIENT" : {
                                 Intent i = new Intent(getApplicationContext(), DashboardClientActivity.class);Log.i("CLIENT==>", user.toString());
                                 i.putExtra("clientEmail", user.getEmail());
+                                i.putExtra("clientFirstName", user.getFirstName());
                                 startActivity(i);
                                 break;
                             }
 
                             case "AGENT" : {
                                 Intent i = new Intent(getApplicationContext(), DashboardAgentActivity.class);Log.i("AGENT==>", user.toString());
-                                i.putExtra("matricule", user.getMatricule());Log.i("MATRICULE ===>==>", user.getMatricule());
+                                i.putExtra("matricule", user.getMatricule());
+                                i.putExtra("agentFirstName", user.getFirstName());
                                 startActivity(i);
                                 break;
                             }
