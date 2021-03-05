@@ -30,8 +30,8 @@ public class DashboardAgentActivity extends AppCompatActivity {
             agentMatricule = null;
         } else {
             agentMatricule = extras.getString("matricule");
-            agentFirstName = extras.getString("agentFirstName");
-            welcomeAgent.append(" " + agentFirstName);
+            /*agentFirstName = extras.getString("agentFirstName");
+            welcomeAgent.append(" " + agentFirstName);*/
         }
 
     }

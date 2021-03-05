@@ -27,8 +27,8 @@ public class DashboardClientActivity extends AppCompatActivity {
             clientEmail = null;
         } else {
             clientEmail = extras.getString("clientEmail");
-            clientFirstName = extras.getString("clientFirstName");
-            welcomeClient.append(" " + clientFirstName);
+            /*clientFirstName = extras.getString("clientFirstName");
+            welcomeClient.append(" " + clientFirstName);*/
         }
     }
 

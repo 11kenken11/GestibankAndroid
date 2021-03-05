@@ -25,8 +25,8 @@ public class DashboardAdminActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
 
 
-            String adminFirstName = extras.getString("adminFirstName");
-            welcomeAdmin.append(" " + adminFirstName);
+            /*String adminFirstName = extras.getString("adminFirstName");
+            welcomeAdmin.append(" " + adminFirstName);*/
 
     }
 
