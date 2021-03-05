@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "603e5ec4f26f051148be69c2"
+  },
+  "agentMatricule": "01",
+  "email": "i",
+  "firstName": "i",
+  "lastName": "i",
+  "role": "CLIENT",
+  "status": "EN_ATTENTE",
+  "tel": "2"
+},{
+  "_id": {
+    "$oid": "603e6622f26f051148be69c3"
+  },
+  "email": "admin",
+  "firstName": "Jeanne",
+  "lastName": "test",
+  "password": "admin",
+  "role": "ADMIN",
+  "status": "EN_ATTENTE",
+  "tel": "7"
+},{
+  "_id": {
+    "$oid": "603e66abf26f051148be69c4"
+  },
+  "agentMatricule": "01",
+  "email": "user",
+  "firstName": "test2",
+  "lastName": "test2",
+  "password": "user",
+  "role": "CLIENT",
+  "status": "EN_ATTENTE",
+  "tel": "0"
+},{
+  "_id": {
+    "$oid": "603e66d2f26f051148be69c5"
+  },
+  "email": "agent",
+  "firstName": "Jean",
+  "lastName": "test3",
+  "matricule": "01",
+  "password": "agent",
+  "role": "AGENT",
+  "status": "EN_ATTENTE",
+  "tel": "80"
+},{
+  "_id": {
+    "$oid": "603e97e90d5bcd2bb4ed9d5b"
+  },
+  "agentMatricule": "01",
+  "email": "a",
+  "firstName": "tst",
+  "lastName": "test5",
+  "password": "a",
+  "role": "CLIENT",
+  "status": "EN_ATTENTE",
+  "tel": "2"
+},{
+  "_id": {
+    "$oid": "603e984f0d5bcd2bb4ed9d5c"
+  },
+  "email": "ag",
+  "firstName": "a",
+  "lastName": "agentTest",
+  "matricule": "321",
+  "password": "ag",
+  "role": "AGENT",
+  "status": "VALIDE",
+  "tel": "2"
+},{
+  "_id": {
+    "$oid": "603f5b3d5c6f80034878525f"
+  },
+  "email": "cl",
+  "firstName": "c",
+  "lastName": "client1",
+  "role": "CLIENT",
+  "status": "EN_ATTENTE",
+  "tel": "2",
+  "typeCompte": "CSC"
+},{
+  "_id": {
+    "$oid": "603f5c925c6f800348785261"
+  },
+  "email": "e",
+  "firstName": "t",
+  "lastName": "agent3",
+  "matricule": "1",
+  "password": "test",
+  "role": "AGENT",
+  "status": "VALIDE",
+  "tel": "7"
+},{
+  "_id": {
+    "$oid": "603f5f115c6f800348785262"
+  },
+  "email": "ag",
+  "firstName": "test",
+  "lastName": "agent2",
+  "matricule": "e",
+  "password": "h1Veenu3dO",
+  "role": "AGENT",
+  "status": "VALIDE",
+  "tel": "5"
+},{
+  "_id": {
+    "$oid": "603fba1503c14d8190abfed3"
+  },
+  "email": "e5",
+  "firstName": "t",
+  "lastName": "user9",
+  "role": "CLIENT",
+  "status": "EN_ATTENTE",
+  "tel": "2",
+  "typeCompte": "CAC"
+},{
+  "_id": {
+    "$oid": "603ffee203c14d8190abfed4"
+  },
+  "agentMatricule": "01",
+  "email": "client",
+  "firstName": "John",
+  "lastName": "client",
+  "password": "client",
+  "role": "CLIENT",
+  "status": "VALIDE",
+  "tel": "9",
+  "typeCompte": "EP"
+},{
+  "_id": {
+    "$oid": "6040b037d115ef59c06bd4ce"
+  },
+  "agentMatricule": "01",
+  "email": "leo",
+  "firstName": "Leo",
+  "lastName": "Leo",
+  "password": "aze",
+  "role": "CLIENT",
+  "status": "VALIDE",
+  "tel": "2",
+  "typeCompte": "EP"
+}]
