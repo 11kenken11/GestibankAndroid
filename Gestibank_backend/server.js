@@ -19,8 +19,8 @@ var nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "", //use your email
-    pass: "", //use your password
+    user: "", //your email
+    pass: "", // your pwd
   },
 });
 
@@ -62,8 +62,8 @@ app.post("/users", async (req, res) => {
     const user = await db.collection("user").insertOne(userData);
     if (userData.role === "CLIENT") {
       var mailOptions = {
-        from: "", //use your email
-        to: "", // use your destination email
+        from: "", // your email
+        to: "", // your destination
         subject: "Création de votre compte",
         text:
           "Votre demande de création de compte a bien été prise en compte,\n un agent vous sera affecté et votre mot de passe vous sera communiqué à la validation de vos informations",
@@ -91,10 +91,39 @@ app.put("/users/:email", async (req, res) => {
     const user = await db.collection("user").replaceOne({ email }, remplacementUser);
     if (req.body.password && req.body.status === "VALIDE") {
       var mailOptions = {
-        from: "", //use your email
-        to: "", //use your destination email
+        from: "", // your email
+        to: "", // your destination
         subject: "Account created",
         text: "Your password: " + req.body.password,
+      };
+
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("Email sent: " + info.response);
+        }
+      });
+    }
+    res.status(200).json(user);
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+});
+
+// change pwd
+app.put("/users-change-pwd/:email", async (req, res) => {
+  try {
+    const email = req.params.email;
+    const remplacementUser = req.body;
+    const user = await db.collection("user").replaceOne({ email }, remplacementUser);
+    if (req.body.password && req.body.status === "VALIDE") {
+      var mailOptions = {
+        from: "", // your email
+        to: "", // your destination
+        subject: "Password updated successfully",
+        text: "Your password was updated successfully",
       };
 
       transporter.sendMail(mailOptions, function (error, info) {
@@ -122,8 +151,8 @@ app.put("/forgot-password/:email", async (req, res) => {
     const userUpdated = await db.collection("user").replaceOne({ email }, user);
 
     var mailOptions = {
-      from: "", //use your email
-      to: "", //use your destination email
+      from: "", // your email
+      to: "", // your destination
       subject: "New password",
       text: "Your new password: " + password,
     };
@@ -152,8 +181,8 @@ app.put("/check-request/:email", async (req, res) => {
     const userUpdated = await db.collection("user").replaceOne({ email }, user);
 
     var mailOptions = {
-      from: "", //use your email
-      to: "", //use your destination email
+      from: "", // your email
+      to: "", // your destination
       subject: "Demande de chèquier",
       text: "Votre demande de chèquier a bien été prise en compte ",
     };
@@ -182,8 +211,8 @@ app.put("/valid-check/:email", async (req, res) => {
     const userUpdated = await db.collection("user").replaceOne({ email }, user);
 
     var mailOptions = {
-      from: "", //use your email
-      to: "", //use your destination email
+      from: "", // your email
+      to: "", // your destination
       subject: "Chèquier",
       text: "Votre chèquier est prêt ",
     };
@@ -212,8 +241,8 @@ app.put("/reject-request/:email", async (req, res) => {
     const userUpdated = await db.collection("user").replaceOne({ email }, user);
 
     var mailOptions = {
-      from: "", //use your email
-      to: "", //use your destination email
+      from: "", // your email
+      to: "", // your destination
       subject: "Chèquier",
       text: "Votre demande de chèquier a été refusée ",
     };
