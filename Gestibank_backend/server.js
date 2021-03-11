@@ -19,8 +19,8 @@ var nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "kenji.fujimoto.test@gmail.com",
-    pass: "",
+    user: "", //use your email
+    pass: "", //use your password
   },
 });
 
@@ -62,8 +62,8 @@ app.post("/users", async (req, res) => {
     const user = await db.collection("user").insertOne(userData);
     if (userData.role === "CLIENT") {
       var mailOptions = {
-        from: "kenji.fujimoto.test@gmail.com",
-        to: "kenji111.fujimoto@gmail.com",
+        from: "", //use your email
+        to: "", // use your destination email
         subject: "Création de votre compte",
         text:
           "Votre demande de création de compte a bien été prise en compte,\n un agent vous sera affecté et votre mot de passe vous sera communiqué à la validation de vos informations",
@@ -91,8 +91,8 @@ app.put("/users/:email", async (req, res) => {
     const user = await db.collection("user").replaceOne({ email }, remplacementUser);
     if (req.body.password && req.body.status === "VALIDE") {
       var mailOptions = {
-        from: "kenji.fujimoto.test@gmail.com",
-        to: "kenji111.fujimoto@gmail.com",
+        from: "", //use your email
+        to: "", //use your destination email
         subject: "Account created",
         text: "Your password: " + req.body.password,
       };
@@ -122,8 +122,8 @@ app.put("/forgot-password/:email", async (req, res) => {
     const userUpdated = await db.collection("user").replaceOne({ email }, user);
 
     var mailOptions = {
-      from: "kenji.fujimoto.test@gmail.com",
-      to: "kenji111.fujimoto@gmail.com",
+      from: "", //use your email
+      to: "", //use your destination email
       subject: "New password",
       text: "Your new password: " + password,
     };
@@ -152,8 +152,8 @@ app.put("/check-request/:email", async (req, res) => {
     const userUpdated = await db.collection("user").replaceOne({ email }, user);
 
     var mailOptions = {
-      from: "kenji.fujimoto.test@gmail.com",
-      to: "kenji111.fujimoto@gmail.com",
+      from: "", //use your email
+      to: "", //use your destination email
       subject: "Demande de chèquier",
       text: "Votre demande de chèquier a bien été prise en compte ",
     };
@@ -182,8 +182,8 @@ app.put("/valid-check/:email", async (req, res) => {
     const userUpdated = await db.collection("user").replaceOne({ email }, user);
 
     var mailOptions = {
-      from: "kenji.fujimoto.test@gmail.com",
-      to: "kenji111.fujimoto@gmail.com",
+      from: "", //use your email
+      to: "", //use your destination email
       subject: "Chèquier",
       text: "Votre chèquier est prêt ",
     };
@@ -212,8 +212,8 @@ app.put("/reject-request/:email", async (req, res) => {
     const userUpdated = await db.collection("user").replaceOne({ email }, user);
 
     var mailOptions = {
-      from: "kenji.fujimoto.test@gmail.com",
-      to: "kenji111.fujimoto@gmail.com",
+      from: "", //use your email
+      to: "", //use your destination email
       subject: "Chèquier",
       text: "Votre demande de chèquier a été refusée ",
     };
